@@ -1,0 +1,162 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  font-family:'Montserrat',sans-serif;
+  font-weight: 700;
+  height: 60px;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 8px 0 0 0;
+	}
+
+.dropdown-content a {
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+    font-family: "Libre Baskerville",serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+	line-height: 2rem;
+	color: #262D3D;
+}
+
+.dropdown, .cta {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn, .cta  {
+  font-size: 14px;  
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+    text-transform: uppercase;	
+  color: #475566;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #f6f3ed;
+  color: #bda164;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 570px;
+  height: 100%;
+  right: 0;
+  margin-top: 1px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background: #f6f3ed;
+  padding: 15px 0px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 250px;
+  padding: 0 10px;
+  min-height: 200px;
+}
+
+.column-2{
+  float: left;
+  width: 500px;
+  padding: 0px;
+}
+
+.column-2 .column{ 
+  margin: 0px;
+  width: 230px;
+}
+
+
+.column a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+    color: #262D3D;
+
+}
+
+.column a:hover {
+  background-color: #f6f3ed;
+  color: 
+}
+
+.row{
+
+	margin: 0 auto;
+    width: 90%;
+	
+	}
+
+h4{
+margin-bottom: 0px;
+font-size: 16px;
+}
+
+
+h2{
+color: #475566;
+
+}
+
+
+.cta{
+background-color: #bda164;
+color: #fff;
+margin: 5px;
+padding: 8px;
+}
+
+.cta:hover{
+background-color: #d0bd92 !important;
+color: #fff !important;
+text-decoration:none;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+	min-height: 0px;
+  }
