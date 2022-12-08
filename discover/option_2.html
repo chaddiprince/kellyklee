@@ -1,0 +1,322 @@
+
+<html lang="en">
+<head>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fria+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<link rel="stylesheet" href="css/style4.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+ 
+  
+      $('input[type=checkbox][name=products]').change(function() {
+    if ($(this).is(':checked')) {
+        $(this).parent('li').addClass('enabled');
+    }
+    else {
+        $(this).parent('.product').removeClass('enabled');
+
+    }
+  });
+  
+  
+        $('input[type=checkbox][name=home_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.home_product').addClass('enabled');
+    }
+    else {
+        $('.home_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=vehicle_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.vehicle_product').addClass('enabled');
+    }
+    else {
+        $('.vehicle_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=valuable_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.valuable_product').addClass('enabled');
+    }
+    else {
+        $('.valuable_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=umbrella_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.umbrella_product').addClass('enabled');
+    }
+    else {
+        $('.umbrella_product').removeClass('enabled');
+
+    }
+  });
+  
+  
+  $( "#note_link" ).click(function() {
+       $('.noteable').toggle();
+});
+
+
+$( "#overview_link" ).click(function() {
+	$('#overview_section').show();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehicles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+
+});
+
+$( "#people_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').show();
+	$('#homes_section').hide();
+	$('#vehicles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#home_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').show();
+	$('#vehicles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#vehicles_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehicles_section').show();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#valuable_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehicles_section').hide();
+	$('#valuables_section').show();
+	$('#umbrella_section').hide();
+});
+
+$( "#umbrella_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehicles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').show();
+});
+
+  
+  
+  
+  $(function () {
+    $("input[type=checkbox]").change();
+});
+  
+  
+});
+
+
+</script>
+
+
+</head>
+<body>
+<div id="page">
+<div id="side_nav">
+<div id="left_nav">
+<h3>modern<span class="light_blue">metric</span></h3>
+<ul>
+<li><a id="overview_link" href="#Overview"><i class="material-icons" aria-hidden="true">summarize</i>Overview</a></li>
+<li><a id="people_link" href="#People"><i class="material-icons" aria-hidden="true">group</i>People</a></li>
+</ul>
+<h4><i class="material-icons" aria-hidden="true">category</i>Products</h4>
+<ul>
+<li class="product"><input type="checkbox" id="Homes_nav" name="products" value="Homes" checked><label for="Homes_nav">  <i class="material-icons" aria-hidden="true">home</i> <span class="nav_no_link">Homes</span></label>
+<a id="home_link" class="nav_link"href="#homes">Homes</a> </li>
+<li class="product"><input type="checkbox" id="Vehicle_nav" name="products" value="Vehicles"><label for="Vehicle_nav"> <i class="material-icons" aria-hidden="true">directions_car</i><span class="nav_no_link">Vehicles</span></label>
+<a id="vehicles_link" class="nav_link"href="#vehicles">Vehicles</a> </li>
+<li class="product"><input type="checkbox" id="Valueable_nav" name="products" value="Valuables"><label for="Valueable_nav"> <i class="material-icons" aria-hidden="true">diamond</i> <span class="nav_no_link">Valuables</span></label>
+<a id="valuable_link" class="nav_link"href="#valuables">Valuables</a> </li>
+<li class="product"><input type="checkbox" id="Umbrella_nav" name="products" value="Umbrella" ><label for="Umbrella_nav"> <i class="material-icons" aria-hidden="true">beach_access</i> <span class="nav_no_link">Umbrella</span></label>
+<a id="umbrella_link" class="nav_link"href="#umbrella">Umbrella</a>  </li>
+</ul>
+
+
+<div class="hide">
+<h4><i class="material-icons" aria-hidden="true">filter_list</i>Filters</h4>
+<h5>Status</h5>
+<ul>
+<li><label for="blank"> <i class="material-icons" aria-hidden="true">check_box_outline_blank</i>Blank</label> <input type="checkbox" id="blank" name="blank" value="blank"></li>
+<li><label for="filled"> <i class="material-icons" aria-hidden="true">check_box</i>Filled</label> <input type="checkbox" id="filled" name="filled" value="filled"></li>
+</ul>
+<h5>Source</h5>
+<ul>
+<li><label for="chad_diprince"> <i class="material-icons" aria-hidden="true">person</i>Chad DiPrince</label> <input type="checkbox" id="chad_diprince" name="chad_diprince" value="chad_diprince"></li>
+<li><label for="web"> <i class="material-icons" aria-hidden="true">list_alt</i>Engage</label> <input type="checkbox" id="web" name="web" value="web"></li>
+<li><label for="hazard_hub"> <i class="material-icons" aria-hidden="true">bolt</i>Hazard Hub</label> <input type="checkbox" id="hazard_hub" name="hazard_hub" value="hazard_hub"></li>
+</ul>
+</div>
+<div class="log_out_button">
+<a href="#logout"><i class="material-icons" aria-hidden="true">logout</i>Logout</a></div>
+</div>
+</div>
+<div id="canvas">
+<div id="header">
+<div id="head_nav">
+<div id="contact">
+<h1>James Smith</h1>
+<h6>jsmith@email.com | 720-495-9384</h6>
+</div>
+<div id="controls">
+<div class="proposal_button">
+<a href="#proposal"><i class="material-icons" aria-hidden="true">cloud_download</i>Generate proposal</a>
+</div>
+<div class="add_button">
+<a id="note_link" href="#proposal"><i class="material-icons" aria-hidden="true">sticky_note_2</i>Add Note</a>
+</div>
+</div>
+</div>
+</div>
+<div id="worksheet">
+<section id="overview_section">
+<h2>Overview</h2>
+</section>
+<section id="people_section">
+<h2>People</h2>
+</section>
+<section id="homes_section">
+<h2>Homes</h2>
+</section>
+<section id="vehicles_section">
+<h2>Vehicles</h2>
+</section>
+<section id="valuables_section">
+<h2>Valuables</h2>
+</section>
+<section id="umbrella_section">
+<h2>Umbrella</h2>
+</section>
+<div id="noteables" class="noteable">
+<h3>Notes<h3>
+<textarea id="note_text_area" name="note_text_area" placeholder="...">
+</textarea>
+<div>
+<div class="hide">
+<section>
+<div class="section_header">
+<h2>Section Header</h2>
+</div>
+<div class="object">
+Object
+<div class="data_group">
+<div class="table">
+
+<div class="row first_row">
+<div class="status">
+s
+</div>
+<div class="question">
+question
+</div>
+<div class="answer">
+answer
+</div>
+<div class="status">
+s
+</div>
+</div>
+
+<div class="row">
+<div class="status">
+s
+</div>
+<div class="question">
+question
+</div>
+<div class="answer">
+answer
+</div>
+<div class="status">
+s
+</div>
+</div>
+
+<div class="row">
+<div class="status">
+s
+</div>
+<div class="question">
+question
+</div>
+<div class="answer">
+answer
+</div>
+<div class="status">
+s
+</div>
+</div>
+
+<div class="row last_row">
+<div class="status">
+s
+</div>
+<div class="question">
+question
+</div>
+<div class="answer">
+answer
+</div>
+<div class="status">
+s
+</div>
+</div>
+
+</div>
+<div class="notes">
+<div class="note_pad">
+Notes
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</body>
