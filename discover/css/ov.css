@@ -578,3 +578,26 @@ border-left: 1px solid #dfdfe5;
 	visibility:hidden
 	
 }
+
+.reset_icon{
+	color: #aaa;
+	border-width:0;
+	background: #fff;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 15px;
+	display:none;
+
+}
+
+
+.reset_icon .material-icons{
+	margin-top: -5px;
+}
+
+.reset_icon:hover{
+	color: #005dff;
+}
+
+
+
