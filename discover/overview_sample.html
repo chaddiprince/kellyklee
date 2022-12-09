@@ -1,0 +1,518 @@
+
+<html lang="en">
+<head>
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fria+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<link rel="stylesheet" href="css/ov.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+<script>
+$(document).ready(function(){
+
+
+      $('#life').change(function() {
+    if ($('#life_yes').is(':checked')) {
+       $('#life_review').addClass('show');
+    }
+    else {
+       $('#life_review').removeClass('show');
+
+    }
+  });
+  
+  
+   $('#tickets').change(function() {
+    if ($('#tickets_yes').is(':checked')) {
+       $('#tickets_des').addClass('show');
+       $('#tickets_text').focus();
+    }
+    else {
+       $('#tickets_des').removeClass('show');
+
+    }
+  });
+  
+  
+        $('#cancellation').change(function() {
+    if ($('#cancellation_yes').is(':checked')) {
+       $('#cancellation_des').addClass('show');
+       $('#cancellation_text').focus();
+    }
+    else {
+       $('#cancellation_des').removeClass('show');
+
+    }
+  });
+
+
+  
+        $('#bankruptcy').change(function() {
+    if ($('#bankruptcy_yes').is(':checked')) {
+       $('#bankruptcy_des').addClass('show');
+       $('#bankruptcy_text').focus();
+    }
+    else {
+       $('#bankruptcy_des').removeClass('show');
+
+    }
+  });
+
+
+        $('#crime').change(function() {
+    if ($('#crime_yes').is(':checked')) {
+       $('#crime_des').addClass('show');
+       $('#crime_text').focus();
+    }
+    else {
+       $('#crime_des').removeClass('show');
+
+    }
+  });
+
+
+ 
+  
+      $('input[type=checkbox][name=products]').change(function() {
+    if ($(this).is(':checked')) {
+        $(this).parent('li').addClass('enabled');
+    }
+    else {
+        $(this).parent('.product').removeClass('enabled');
+
+    }
+  });
+  
+  
+        $('input[type=checkbox][name=home_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.home_product').addClass('enabled');
+    }
+    else {
+        $('.home_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=vehicle_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.vehicle_product').addClass('enabled');
+    }
+    else {
+        $('.vehicle_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=valuable_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.valuable_product').addClass('enabled');
+    }
+    else {
+        $('.valuable_product').removeClass('enabled');
+
+    }
+  });
+  
+    
+        $('input[type=checkbox][name=umbrella_product]').change(function() {
+    if ($(this).is(':checked')) {
+       $('.umbrella_product').addClass('enabled');
+    }
+    else {
+        $('.umbrella_product').removeClass('enabled');
+
+    }
+  });
+  
+  
+  $( "#note_link" ).click(function() {
+       $('.noteable').toggle();
+});
+
+
+$( "#overview_link" ).click(function() {
+	$('#overview_section').show();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehciles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+
+});
+
+$( "#people_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').show();
+	$('#homes_section').hide();
+	$('#vehciles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#home_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').show();
+	$('#vehciles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#vehicles_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehciles_section').show();
+	$('#valuables_section').hide();
+	$('#umbrella_section').hide();
+});
+
+$( "#valuable_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehciles_section').hide();
+	$('#valuables_section').show();
+	$('#umbrella_section').hide();
+});
+
+$( "#umbrella_link" ).click(function() {
+	$('#overview_section').hide();
+	$('#people_section').hide();
+	$('#homes_section').hide();
+	$('#vehciles_section').hide();
+	$('#valuables_section').hide();
+	$('#umbrella_section').show();
+});
+
+  
+  
+  
+  $(function () {
+    $("input[type=checkbox]").change();
+});
+  
+  
+});
+
+
+</script>
+
+
+</head>
+<body>
+<div id="page">
+<div id="side_nav">
+<div id="left_nav">
+<h3>modern<span class="light_blue">metric</span></h3>
+<ul>
+<li><a id="overview_link" href="#Overview"><i class="material-icons" aria-hidden="true">summarize</i> Overview</a></li>
+<li><a id="people_link"  href="#People"><i class="material-icons" aria-hidden="true">group</i> People</a></li>
+<li class="product home_product"><a id="home_link" class="home_link"href="#homes"><i class="material-icons" aria-hidden="true">home</i> Homes</a></li>
+<li class="product vehicle_product"><a id="vehicles_link"href="#vehicles"><i class="material-icons" aria-hidden="true">directions_car</i> Vehicles</a> </li>
+<li class="product valuable_product"><a id="valuable_link"href="#valuables"><i class="material-icons" aria-hidden="true">diamond</i> Valuables</a> </li>
+<li class="product umbrella_product"><a id="umbrella_link"href="#umbrella"><i class="material-icons" aria-hidden="true">beach_access</i> Umbrella</a>  </li>
+</ul>
+<div class="add_button">
++/- Products
+<div class="product_show">
+<ul>
+<li><input type="checkbox" id="Homes_nav2" name="home_product" value="Homes" checked><label for="Homes_nav2"><i class="material-icons" aria-hidden="true">home</i> <span class="">Homes</span></label></li>
+<li><input type="checkbox" id="Vehicle_nav2" name="vehicle_product" value="Vehicles"><label for="Vehicle_nav2"> <i class="material-icons" aria-hidden="true">directions_car</i><span class="">Vehicles</span></label></li>
+<li><input type="checkbox" id="Valueable_nav2" name="valuable_product" value="Valuables"><label for="Valueable_nav2"> <i class="material-icons" aria-hidden="true">diamond</i> <span class="">Valuables</span></label> </li>
+<li><input type="checkbox" id="Umbrella_nav2" name="umbrella_product" value="Umbrella" ><label for="Umbrella_nav2"> <i class="material-icons" aria-hidden="true">beach_access</i> <span class="">Umbrella</span></label> </li>
+</ul>
+</div>
+</div>
+
+
+<div class="log_out_button">
+<a href="#logout"><i class="material-icons" aria-hidden="true">logout</i>Logout</a></div>
+</div>
+</div>
+<div id="canvas">
+<div id="header">
+<div id="head_nav">
+<div id="contact">
+<h1>James Smith</h1>
+<h6>jsmith@email.com | 720-495-9384</h6>
+</div>
+<div id="controls">
+<div class="proposal_button">
+<a href="#proposal"><i class="material-icons" aria-hidden="true">cloud_download</i>Generate proposal</a>
+</div>
+<div class="add_button">
+<a id="note_link" href="#proposal"><i class="material-icons" aria-hidden="true">sticky_note_2</i>Add Note</a>
+</div>
+</div>
+</div>
+</div>
+<div id="worksheet">
+<section id="overview_section">
+
+<div class="section_header">
+<h2>Overview</h2>
+</div>
+<div class="object">
+<div class="data_group">
+<div class="table">
+
+<div class="row first_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+
+</div>
+<div class="question">
+How can we help?
+</div>
+<div class="answer">
+<input type="text" class="textfield" id="goals" name="goals" value="" placeholder=" ">
+
+</div>
+
+</div>
+
+<div class="row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+
+
+</div>
+<div class="question">
+Who handles your insurance now?
+</div>
+<div class="answer">
+<input type="text" class="textfield" id="current_coverage" name="current_coverage" value="" placeholder=" ">
+</div>
+
+</div>
+
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Declaration pages
+</div>
+<div class="answer upload_files">
+<input type="checkbox" id="upload_check" name="upload" value="one">
+<i class="material-icons" aria-hidden="true">upload</i> Click to upload or drag files here.
+</div>
+
+</div>
+
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Do you have life insurance?
+</div>
+<div class="answer">
+<div class="radio" id="life">
+ <input type="radio" id="life_yes" name="life_ins" value="yes"> <label for="life_yes">
+
+ Yes</label>
+ <input type="radio" id="life_no" name="life_ins" value="no"> <label for="life_no">
+
+
+ No</label>
+</div>
+</div>
+
+</div>
+
+<div class="row check_row conditional_row" id="life_review">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Do you want a life insurance review?</div>
+<div class="answer">
+<div class="radio" >
+ <input type="radio" id="life_review_yes" name="life_review" value="yes"> <label for="life_review_yes">
+
+ Yes</label>
+ <input type="radio" id="life_review_no" name="life_review" value="no"> <label for="life_review_no">
+
+
+ No</label>
+</div>
+</div>
+
+</div>
+<div class="row blank_row">
+<h4>Account history: <span class="text_med">Have you had any of the following in the past 5 years?</span></h4></div>
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Tickets, accidents or claims</div>
+<div class="answer">
+<div class="radio" id="tickets">
+ <input type="radio" id="tickets_yes" name="tickets" value="yes"> <label for="tickets_yes">
+ Yes</label>
+ <input type="radio" id="tickets_no" name="tickets" value="no"> <label for="tickets_no">
+ No</label>
+</div>
+</div>
+</div>
+
+<div class="row conditional_row" id="tickets_des">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Description
+</div>
+<div class="answer">
+<textarea id="tickets_text" name="tickets_text" placeholder=" "></textarea>
+</div>
+</div>
+
+
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Coverage lapse, cancellation or nonrenewal</div>
+<div class="answer">
+
+<div class="radio" id="cancellation">
+ <input type="radio" id="cancellation_yes" name="cancellation" value="yes"> <label for="cancellation_yes">
+ Yes</label>
+ <input type="radio" id="cancellation_no" name="cancellation" value="no"> <label for="cancellation_no">
+ No</label>
+</div>
+</div>
+</div>
+
+<div class="row conditional_row " id="cancellation_des">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Description
+</div>
+<div class="answer">
+<textarea id="cancellation_text" name="cancellation_text" placeholder=" "></textarea>
+</div>
+</div>
+
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Judgment, lien, foreclosure, repossession, or filed for bankruptcy</div>
+<div class="answer">
+
+<div class="radio" id="bankruptcy">
+ <input type="radio" id="bankruptcy_yes" name="bankruptcy" value="yes"> <label for="bankruptcy_yes">
+ Yes</label>
+ <input type="radio" id="bankruptcy_no" name="bankruptcy" value="no"> <label for="bankruptcy_no">
+ No</label>
+</div>
+</div>
+</div>
+
+<div class="row conditional_row" id="bankruptcy_des">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Description
+</div>
+<div class="answer">
+<textarea id="bankruptcy_text" name="bankruptcy_text" placeholder=" "></textarea>
+</div>
+</div>
+
+<div class="row check_row">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Criminal indictment or conviction</div>
+<div class="answer">
+
+<div class="radio" id="crime">
+ <input type="radio" id="crime_yes" name="crime" value="yes"> <label for="cancellation_yes">
+ Yes</label>
+ <input type="radio" id="crime_no" name="crime" value="no"> <label for="cancellation_no">
+ No</label>
+</div>
+</div>
+</div>
+
+<div class="row conditional_row" id="crime_des">
+<div class="status">
+<i class="material-icons" aria-hidden="true">check_circle</i>
+</div>
+<div class="question">
+Description
+</div>
+<div class="answer">
+<textarea id="crime_text" name="crime_text" placeholder=" "></textarea>
+</div>
+</div>
+</div>
+<div class="notes">
+<div class="note_pad hide">
+Notes
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+<section id="people_section">
+<h2>People</h2>
+</section>
+<section id="homes_section">
+<h2>Homes</h2>
+</section>
+<section id="vehicles_section">
+<h2>Vehicles</h2>
+</section>
+<section id="valuables_section">
+<h2>Valuables</h2>
+</section>
+<section id="umbrella_section">
+<h2>Umbrella</h2>
+</section>
+
+</div>
+
+</div>
+<div id="noteables" class="noteable">
+<h3>Notes<h3>
+<textarea id="note_text_area" name="note_text_area" placeholder="...">
+</textarea>
+
+</div>
+</div>
+</body>
