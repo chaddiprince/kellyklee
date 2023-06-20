@@ -1,0 +1,645 @@
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<style>
+:root {
+  --primary_color: #1277D9;
+  --secondary_color: #f3b921;
+}
+
+/*------------------------------------*
+  RESET
+*------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td { 
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address, caption, cite, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+
+}
+
+ul{
+  list-style-type: none;
+margin: 5px;  
+  
+}
+
+ol{
+margin: 5px 20px;
+}
+
+li{
+line-height: 1.5em;}
+
+.discount{
+width: 50%;
+
+}
+
+.discount li:before {
+  content: '✓';
+  font-weight: 800;
+
+}
+
+.provisons ul li:before {
+  content: '•';
+  font-weight: 800;
+  margin: 2px;
+  font-size: 1.2em;
+  
+
+}
+
+/*------------------------------------*
+  MAIN
+*------------------------------------*/
+html {
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+  line-height: 150%;
+  font-weight: 400;
+
+
+}
+
+body{
+font-family: 'Open Sans', sans-serif;
+color: #333;
+}
+
+/*------------------------------------*
+  HEADERS and TYPOGRAHY
+*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary_color);
+  font-family: 'Montserrat', sans-serif;
+  	font-weight: 600;
+	margin: 15px 0px;
+
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 400;
+	
+	}
+h2 {font-size: 2em;
+font-weight: 600;
+	margin-bottom: 10px;
+}
+h3 {font-size: 1em;
+	margin-bottom: -15px;
+}
+h4 {font-size: 1.25em
+}
+
+
+.sign_table h4{
+color: #fff;
+}
+
+h5 {font-size: .67em;}
+
+p{ margin: 1em 0;}
+
+.subhead{ font-size: 1.5em;
+margin: 0px;
+} 
+
+
+.detail_label{
+font-weight: 600;
+}
+
+
+.grade{
+
+    display: inline-block;
+    width: 2em;
+    height: 1.5em;
+    background: #f8f8ff;
+    text-align: center;
+	padding: 4px 1px;
+	font-weight: 800;
+		border: 1px solid #aaa;
+	border-radius: 5px;
+}
+
+
+.grade_a{
+
+    background: #d9ead3;
+	border: 1px solid #277318;
+	border-radius: 5px;
+}
+
+.grade_b{
+
+    background: #e8f1cb;	
+	border: 1px solid #81ab03;
+	border-radius: 5px;
+}
+
+.grade_c{
+
+    background: #f3ea89;
+	border: 1px solid #ead706;
+	border-radius: 5px;
+}
+
+.grade_d{
+
+    background: #f1d797;
+	border: 1px solid #c57e08;
+	border-radius: 5px;
+}
+
+.grade_f{
+
+    background: #f3b5a0;
+	border: 1px solid #b03e17;
+	border-radius: 5px;
+}
+
+
+/*------------------------------------*
+  NAV
+*------------------------------------*/
+#nav{
+height: 100px;
+display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+ justify-content: space-between;
+align-items: center;
+width: 100%;
+  position: fixed;
+  top: 0;
+
+}
+
+#logo{
+margin-left: 30px;
+display: flex;
+Width: 50%;
+align-items: center;
+}
+
+#logo .title{
+
+display:none;
+}
+
+#products_nav{
+margin-right: 30px;
+heightL 60px;
+}
+
+#nav a{
+text-decoration: none;
+color: var(--primary_color);
+font-size: 1.25em;
+font-weight: 600;
+margin-right: 1em;
+}
+
+
+/*------------------------------------*
+  LAYOUT
+*------------------------------------*/
+
+#proposal_body{
+width: 80%;
+min-width: 600px;
+max-width: 1000px;
+margin: auto;
+}
+
+
+#cover{
+display: flex;
+  flex-direction: column;
+text-align: center;
+height: 60vh;
+min-height: 350px;
+max-height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section{
+margin: 20px 0px;
+background: #fff;
+padding: 30px 50px;
+}
+
+.rounded{
+border-radius: 200px
+}
+
+
+
+#advisor_info{
+line-height:1.75em;
+
+}
+
+#advisor_info span{
+display: block;
+}
+
+#advisor_info .advior_name{
+font-weight: 600;
+color: var(--primary_color);
+
+}
+
+
+#summary_table{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+
+.details{
+    width: 50%;
+
+}
+
+
+
+.detail_list, .risk_list{
+	display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+
+}
+
+.home_risk {
+
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.home_content{
+display: flex;
+margin: 5px 0px;
+}
+
+
+.vehicle_card{
+display: flex;
+}
+
+.vehicle_logo{
+align-self: center;
+padding: 10px;
+}
+
+.vehicle_title{
+width: 75%;
+margin-bottom: 20px;
+}
+
+/*------------------------------------*
+  TABELS
+*------------------------------------*/
+
+.option_table, .sign_table{
+width: 100%;
+border-spacing: 0px;
+font-size: 1em;
+margin-bottom: 20px;
+
+}
+
+td{
+padding: 5px;
+border-bottom: 1px solid #333;
+text-align: center;
+width: 12%;
+min-width: 80px;
+
+
+}
+
+th{
+border-bottom: 1px solid var(--primary_color);
+padding: 5px;
+width: 12%;
+text-align: center;
+font-weight: 600;
+
+
+}
+
+
+.sign_table th{
+background: var(--primary_color);
+color: #fff;
+}
+
+
+.sign_table td{
+padding: 5px;
+border-bottom: 1px solid #333;
+text-align: center;
+width: 12%;
+min-width: 80px;
+
+}
+
+
+
+.sign_table .number_format{
+text-align: right;
+
+}
+
+.row_description{
+width: 34%;
+border-right: 2px solid var(--primary_color);
+text-align: left;
+font-weight: 600;
+
+}
+
+tr {
+background-color: #fff;
+}
+
+tr:nth-child(even) {
+background-color: #f8f8ff;
+}
+
+
+td ,  th{
+border-right: solid 1px #333;
+margin: 0px
+}
+
+td:last-child , th:last-child {
+border-right: 0px;
+}
+
+.table_title{background: #fff;}
+
+
+/* Style the header */
+.header {
+background-color: #fff;
+}
+
+/* Page content */
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  border-bottom: solid #aaa .5px;
+  width: 100% !important;
+  height: 80px !important;
+
+
+}
+
+.sticky #logo .title{
+display: inline-block;
+}
+
+.sticky a {
+font-size: 1em !important;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+</style>
+
+
+
+<body>
+<div class="header" id="nav">
+<div id="logo"><img src="img/small_logo.png" alt="Hub International"  height="80px">
+<div class="title"> <h4>|  James and Juile Franklin</h4></div>
+</div> 
+<div id="products_nav">
+<a href="#homes" class="products">Homes</a>
+<a href="#vehicles" class="products">Vehicles</a>
+<a href="#valuables" class="products">Valuables</a>
+<a href="#umbrella" class="products">Umbrella</a>
+</div>
+</div>
+
+
+<div id="proposal_body">
+
+
+<div id="summary" class="section" style="margin-top: 200px;>
+<div id="summary_table">
+<h2>Coverage Summary</h2>
+<table class="sign_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Home</h4></th>
+      <th>Insurer</th>
+      <th>Period</th>
+      <th class="number_format">Deductible</th>
+	  <th class="number_format">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">3434 W 26th Ave.</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+	<tr>
+      <td class="row_description">2549 S. Kearney St.</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+  </tbody>
+</table>
+<table class="sign_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Vehicle</h4></th>
+      <th>Insurer</th>
+      <th>Period</th>
+      <th class="number_format">Deductible</th>
+	  <th class="number_format">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">2019 Honda Civic</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+	<tr>
+      <td class="row_description">2023 Audi 5000</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+  </tbody>
+</table>
+<table class="sign_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Valuables</h4></th>
+      <th>Insurer</th>
+      <th>Period</th>
+      <th class="number_format">Deductible</th>
+	  <th class="number_format">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Jewelry</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+	<tr>
+      <td class="row_description">Art</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="sign_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Watercraft</h4></th>
+      <th>Insurer</th>
+      <th>Period</th>
+      <th class="number_format">Deductible</th>
+	  <th class="number_format">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">zzz-BoatName</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="sign_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Umbrella</h4></th>
+      <th>Insurer</th>
+      <th>Period</th>
+      <th class="number_format">Deductible</th>
+	  <th class="number_format">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">$10,000,000</td>
+      <td>Chubb</td>
+      <td>Cell</td>
+      <td class="number_format">Cell</td>
+      <td class="number_format">Cell</td>
+    </tr>
+  </tbody>
+</table>
+<div class="provisons">
+<h4>Next Steps</h4>
+<ol>
+<li>Signed broker of record for California Chubb home, valuables, and excess liability policy</li>
+<li>Placement of Colorado Home and California Auto</li>
+<li>Once CA home, Valuables, and Excess are with Insurance Broker, we will review coverages for adjustments</li>
+</ol>
+<div class="sub_provision">
+<h4>Requirements</h4>
+<ul>
+<li>Signed broker of record for California Chubb home, valuables, and excess liability policy</li>
+<li>Placement of Colorado Home and California Auto</li>
+<li>Once CA home, Valuables, and Excess are with Insurance Broker, we will review coverages for adjustments</li>
+</ul>
+</div>
+<div class="sub_provision">
+<h4>In-person home review</h4>
+<p>After your home policies are issued, COMPANY NAME will visit your home to verify it’s features and ensure it is properly covered. I understand that a change in coverage and may result in an adjustment of my rate.</p>
+</div>
+<div class="sub_provision">
+<h4>Information Accuracy</h4>
+<p>The information contained in this proposal is important in understanding risk and setting rates. I confirm, to the best of my knowledge, the information in this proposal is accurate.</p>
+</div>
+<div class="signature_line">
+<h4>Client signature</h4>
+<img src="img/sign.png" alt="signature" >
+<p class="disclaimer" style="margin-top: -28px;">James Franklin</p>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+ 

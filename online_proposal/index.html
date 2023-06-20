@@ -1,0 +1,818 @@
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<style>
+:root {
+  --primary_color: #1277D9;
+  --secondary_color: #f3b921;
+}
+
+/*------------------------------------*
+  RESET
+*------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td { 
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address, caption, cite, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+
+}
+
+ul{
+  list-style-type: none;
+margin: 5px;  
+  
+}
+
+li{
+line-height: 1.5em;}
+
+.discount{
+width: 50%;
+
+}
+
+.discount li:before {
+  content: '✓';
+  font-weight: 800;
+
+}
+
+/*------------------------------------*
+  MAIN
+*------------------------------------*/
+html {
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+  line-height: 150%
+  font-weight: 400;
+
+
+}
+
+body{
+font-family: 'Open Sans', sans-serif;
+color: #333;
+}
+
+/*------------------------------------*
+  HEADERS and TYPOGRAHY
+*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary_color);
+  font-family: 'Montserrat', sans-serif;
+  	font-weight: 600;
+	margin: 15px 0px;
+
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 400;
+	
+	}
+h2 {font-size: 2em;
+font-weight: 600;
+	margin-bottom: 0px;
+}
+h3 {font-size: 1em;
+	margin-bottom: -15px;
+}
+h4 {font-size: 1.25em;
+	margin: 10px;
+
+}
+
+
+h5 {font-size: .67em;}
+
+p{ margin: 1em 0;}
+
+.subhead{ font-size: 1.5em;
+margin: 0px;
+} 
+
+
+.detail_label{
+font-weight: 600;
+}
+
+
+.grade{
+
+    display: inline-block;
+    width: 2em;
+    height: 1.5em;
+    background: #f8f8ff;
+    text-align: center;
+	padding: 4px 1px;
+	font-weight: 800;
+		border: 1px solid #aaa;
+	border-radius: 5px;
+}
+
+
+.grade_a{
+
+    background: #d9ead3;
+	border: 1px solid #277318;
+	border-radius: 5px;
+}
+
+.grade_b{
+
+    background: #e8f1cb;	
+	border: 1px solid #81ab03;
+	border-radius: 5px;
+}
+
+.grade_c{
+
+    background: #f3ea89;
+	border: 1px solid #ead706;
+	border-radius: 5px;
+}
+
+.grade_d{
+
+    background: #f1d797;
+	border: 1px solid #c57e08;
+	border-radius: 5px;
+}
+
+.grade_f{
+
+    background: #f3b5a0;
+	border: 1px solid #b03e17;
+	border-radius: 5px;
+}
+
+
+/*------------------------------------*
+  NAV
+*------------------------------------*/
+#nav{
+height: 100px;
+display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+ justify-content: space-between;
+align-items: center;
+width: 100%;
+  position: fixed;
+  top: 0;
+
+}
+
+#logo{
+margin-left: 30px;
+display: flex;
+Width: 50%;
+align-items: center;
+}
+
+#logo .title{
+
+display:none;
+}
+
+#products_nav{
+margin-right: 30px;
+heightL 60px;
+}
+
+#nav a{
+text-decoration: none;
+color: var(--primary_color);
+font-size: 1.25em;
+font-weight: 600;
+margin-right: 1em;
+}
+
+
+/*------------------------------------*
+  LAYOUT
+*------------------------------------*/
+
+#proposal_body{
+width: 80%;
+min-width: 600px;
+max-width: 1000px;
+margin: auto;
+}
+
+
+#cover{
+display: flex;
+  flex-direction: column;
+text-align: center;
+height: 60vh;
+min-height: 350px;
+max-height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section{
+margin: 20px 0px;
+background: #fff;
+padding: 30px 50px;
+}
+
+.rounded{
+border-radius: 200px
+}
+
+
+
+#advisor_info{
+line-height:1.75em;
+
+}
+
+#advisor_info span{
+display: block;
+}
+
+#advisor_info .advior_name{
+font-weight: 600;
+color: var(--primary_color);
+
+}
+
+
+#summary_table{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+
+
+.details{
+    width: 50%;
+
+}
+
+
+
+.detail_list, .risk_list{
+	display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+
+}
+
+.home_risk {
+
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.home_content{
+display: flex;
+margin: 5px 0px;
+}
+
+
+.vehicle_card{
+display: flex;
+}
+
+.vehicle_logo{
+align-self: center;
+padding: 10px;
+}
+
+.vehicle_title{
+width: 75%;
+margin-bottom: 20px;
+}
+
+/*------------------------------------*
+  TABELS
+*------------------------------------*/
+
+.option_table{
+width: 100%;
+border-spacing: 0px;
+font-size: 1em;
+margin-bottom: 20px;
+
+}
+
+.option_table td{
+padding: 5px;
+border-bottom: 1px solid #333;
+text-align: center;
+width: 12%;
+min-width: 80px;
+
+
+}
+
+.option_table th{
+border-bottom: 1px solid var(--primary_color);
+padding: 5px;
+width: 12%;
+text-align: center;
+font-weight: 600;
+
+
+}
+
+.option_table .row_description{
+width: 34%;
+border-right: 2px solid var(--primary_color);
+text-align: left;
+font-weight: 600;
+
+}
+
+.option_table tr {
+background-color: #fff;
+}
+.option_table tr:nth-child(even) {
+background-color: #f8f8ff;
+}
+
+
+.option_table td , .option_table th{
+border-right: solid 1px #333;
+margin: 0px
+}
+
+.option_table td:last-child , .option_table th:last-child {
+border-right: 0px;
+}
+
+.table_title{background: #fff;}
+
+
+/* Style the header */
+.header {
+background-color: #fff;
+}
+
+/* Page content */
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  border-bottom: solid #aaa .5px;
+  width: 100% !important;
+  height: 80px !important;
+
+
+}
+
+.sticky #logo .title{
+display: inline-block;
+}
+
+.sticky a {
+font-size: 1em !important;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+</style>
+
+
+
+<body>
+<div class="header" id="nav">
+<div id="logo"><img src="img/small_logo.png" alt="Hub International"  height="80px">
+<div class="title"> <h4>|  James and Juile Franklin</h4></div>
+</div> 
+<div id="products_nav">
+<a href="#homes" class="products">Homes</a>
+<a href="#vehicles" class="products">Vehicles</a>
+<a href="#valuables" class="products">Valuables</a>
+<a href="#umbrella" class="products">Umbrella</a>
+</div>
+</div>
+
+
+<div id="proposal_body">
+
+
+<div id="summary" class="section">
+
+<div id="cover">
+<div id="advisor">
+<div id="advisor_avatar">
+<img class="rounded" src="img/profile_pic.jpg" alt="Maya Dallas" width="100px" >
+</div> 
+<div id="advisor_info">
+<span class="advior_name">Maya Dallas </span>
+<span class="avisor_title">Coverage Advisor</span>
+</div> 
+</div>
+<h1>Coverage Plan</h1>
+<p class="subhead">Prepared for James and  Julie Franklin<p>
+
+</div>
+<div id="summary_table">
+<h2> Summary</h2>
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Coverage</h4></th>
+      <th><input type="checkbox" id="vehicle1" name="option1" value="1"> <br />
+	  <label for="option1"> Option 1</label>
+	  </th>
+      <th>Option 2</th>
+      <th>Option 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Homes</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Vehicles</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Valuables</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Umbrella</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+<p>We have two great options, Vault and Berkley One, that expand your current coverage (including an additional $5 million in excess liability) while saving you hundreds of dollars.</p>
+<p class="disclaimer">disclaimer</p>
+</div>
+</div>
+
+<div id="homes" class="section">
+<div id="home_1">
+<div class="home_card" style=" background-image: linear-gradient(45deg,
+              rgba(255, 255, 255, 1), rgba(255, 255, 255, 1),
+              rgba(255, 255, 255, 0)), url('img/home_map.jpg'); background-size: cover;">
+<h3>Primary Home</h3>
+<h2> 3434 West 26th Ave.</h2>
+<p class="subhead">Denver Colorado, 80211</p>
+<div class="home_content">
+<div class="details">
+<ul class="detail_list">
+<li><span class="detail_label">Type:</span> Townhome </li>
+<li><span class="detail_label">Built:</span> 2019</li>
+<li><span class="detail_label">Exterior:</span> Test2	</li>
+<li><span class="detail_label">Foundation:</span> Finished Basement</li>
+<li><span class="detail_label">Roof:</span> Asphalt, Gambrel	</li>
+<li><span class="detail_label">Frame:</span> Wood</li>
+<li><span class="detail_label">Roof update:</span> 1999	</li>
+<li><span class="detail_label">Electrical Update:</span> 2000</li>
+<li><span class="detail_label">Plumbing update:</span> 2001	</li>
+<li><span class="detail_label">Heating update:</span> 2002</li>
+</ul>
+<h4>Risk scores</h4>
+<ul class="risk_list">
+<li><span class="grade grade_a">A</span> Hail </li>
+<li><span class="grade grade_b">B</span> Flood </li>
+<li><span class="grade grade_c">C</span> Earthquake </li>
+<li><span class="grade grade_d">D</span> Wind </li>
+<li><span class="grade grade_f">F</span> Wildfire </li>
+<li><span class="grade grade_na">N/A</span> Tornado </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="oject_tables">
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Coverage<h4></th>
+      <th>Option 1</th>
+      <th>Option 2</th>
+      <th>Option 3</th>
+    </tr_
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">A - Rebuild Cost</td>
+      <td> <input type="text" id="row-1_option-1" name="row-1_option-1"></td>
+      <td>Cell</td>
+	  <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">B - Other Structures</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">C - Personal Property</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">D - Loss of Use</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>    <tr>
+      <td class="row_description">E - Personal Liability</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>    <tr>
+      <td class="row_description">F - Medical Payments</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td colspan="4" class="table_title row_description"><h4>Deductibles<h4></td>
+ 
+    </tr>
+    <tr>
+      <td class="row_description">Home</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Wind/Hail</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td colspan="4"  class="table_title row_description"><h4>Premium<h4></td>
+    </tr>
+    <tr>
+      <td class="row_description">Home</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">$1,000 deductiable option</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="discount">
+<h4>Discounts</h4>	
+<ul class="detail_list">
+<li>Backup generator</li>
+<li>Gated community</li>
+<li>Indoor sprinklers</li>
+<li>Shutoff master</li>
+<li>Electronic gate</li>
+<li>Fire and smoke</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="vehicle" >
+<div id="drivers" class="section">
+<table class="option_table driver_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Drivers<h4></th>
+      <th>Date of birth</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">James Franklin</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Julie Franklin</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div id="vehicle_1" class="section">
+<div class="vehicle_card">
+<div class="vehicle_logo">
+<img src="img/porsche.png" alt="Porsche"  height="100px">
+</div>
+<div class="vehicle_title"> 
+<h3>Auto</h3>
+<h2>2023 Porsche Cayenne</h2>
+<p class="subhead">Turbo S E-Hybrid AWD</p>
+<ul class="detail_list">
+<li><span class="detail_label">VIN:</span> 1GTGK24R0XR710695 </li>
+<li><span class="detail_label">State:</span> CO</li>
+<li><span class="detail_label">Primary driver:</span> James Franklin</li>
+<li><span class="detail_label">Ownership:</span> Leased</li>
+
+</ul>
+</div>
+</div>
+<div class="oject_tables">
+
+
+
+
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Coverage<h4></th>
+      <th>Option 1</th>
+      <th>Option 2</th>
+      <th>Option 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Bodily Injury</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Property Damage</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Medical payments</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Uninsured motorist </td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>    <tr>
+      <td class="row_description">Roadside service</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>    <tr>
+      <td class="row_description">Loss of use</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Deductibles<h4></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Comprehensive</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">Collision</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Premium<h4></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Auto</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+    <tr>
+      <td class="row_description">$1,000 deductiable option</td>
+      <td>Cell</td>
+      <td>Cell</td>
+      <td>Cell</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="discount">
+<h4>Discounts</h4>	
+<ul class="detail_list">
+<li>Good Driving Record</li>
+<li>Anti-theft</li>
+<li>Anti-lock brakes</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+// Get the header
+var header = document.getElementById("nav");
+var profile = document.getElementById("advisor");
+
+
+
+// Get the offset position of the navbar
+var sticky = profile.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+
+
+</html>
