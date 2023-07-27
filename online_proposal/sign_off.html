@@ -1,0 +1,682 @@
+
+<html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+<style>
+
+:root {
+  --primary_color: #333;
+  --secondary_color: #f3b921;
+}
+
+/*------------------------------------*
+  RESET
+*------------------------------------*/
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td { 
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address, caption, cite, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+
+}
+
+ul{
+margin: 5px;  
+  
+}
+
+li{
+line-height: 1.5em;
+margin-left: 20px;
+}
+
+.discount{
+width: 50%;
+
+}
+
+.discount li:before {
+  content: '✓';
+  font-weight: 800;
+
+}
+
+/*------------------------------------*
+  MAIN
+*------------------------------------*/
+html {
+  background: #fff;
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+
+
+}
+
+body{
+font-family: 'Open Sans', sans-serif;
+color: #333;
+}
+
+/*------------------------------------*
+  HEADERS and TYPOGRAHY
+*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary_color);
+  font-family: 'Montserrat', sans-serif;
+  	font-weight: 600;
+	margin: 15px 0px;
+
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 400;
+	
+	}
+h2 {font-size: 1.5em;
+font-weight: 600;
+	margin-bottom: 0px;
+}
+h3 {font-size: 1em;
+	margin-bottom: -10px;
+}
+h4 {font-size: 1.25em;
+	margin: 10px 0px;
+	color: #333;
+
+
+}
+
+
+h5 {font-size: .67em;}
+
+p{ margin: 1em 0;}
+
+.subhead{ font-size: .9em;
+margin: 0px;
+  line-height: 150%;
+
+} 
+
+
+.detail_label{
+font-weight: 600;
+}
+
+
+.grade{
+
+    display: inline-block;
+    width: 2em;
+    height: 1.5em;
+    background: #f8f8ff;
+    text-align: center;
+	padding: 4px 1px;
+	font-weight: 800;
+		border: 1px solid #aaa;
+	border-radius: 5px;
+}
+
+
+.grade_a{
+
+    background: #d9ead3;
+	border: 1px solid #277318;
+	border-radius: 5px;
+}
+
+.grade_b{
+
+    background: #e8f1cb;	
+	border: 1px solid #81ab03;
+	border-radius: 5px;
+}
+
+.grade_c{
+
+    background: #f3ea89;
+	border: 1px solid #ead706;
+	border-radius: 5px;
+}
+
+.grade_d{
+
+    background: #f1d797;
+	border: 1px solid #c57e08;
+	border-radius: 5px;
+}
+
+.grade_f{
+
+    background: #f3b5a0;
+	border: 1px solid #b03e17;
+	border-radius: 5px;
+}
+
+
+.main-container{
+width: 100%
+margin: 0px auto;
+background: #fff;
+padding: 0px;
+}
+
+.main-header{
+margin: 0px;
+position: fixed;
+top: 0;
+width: 100%;
+z-index:200;
+background: #fff;
+height: 80px;
+display: flex;
+ border-bottom: solid #aaa .5px;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: space-between;
+align-items: center;
+}
+
+
+#advisor{
+display: flex;
+margin-right: 10px;
+}
+
+#advisor_info{
+line-height:1.75em;
+
+}
+
+#advisor_info span{
+display: block;
+}
+
+#advisor_info .advior_name{
+font-weight: 600;
+color: var(--primary_color);
+
+}
+
+.rounded{
+border-radius: 200px
+}
+
+#logo{
+
+display: flex;
+align-items: center;
+}
+
+.main-content{
+width: 100%;
+height: 180vh;
+min-width: 400px;
+max-width: 1000px;
+position: sticky;
+margin: 100px auto;
+top: 100px;
+
+
+}
+
+.main-footer{
+width: 100%;
+margin: 0px;
+margin-top: 300px;
+}
+
+.section_header{
+position: sticky;
+top: 80px;
+background: #fff;
+z-index: 2;
+width: 48%;
+min-width:400px;
+border-bottom: 1px solid #263746;
+height: 79px;
+
+}
+
+.table_header{
+position: sticky;
+top: 80px;
+text-align: right;
+}
+
+.section{
+margin: 0px auto 100px;
+}
+
+
+
+.details{
+    width: 50%;
+	min-width:400px;
+
+}
+
+
+
+.detail_list, .risk_list{
+	display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+
+}
+
+.home_risk {
+
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.home_content{
+display: flex;
+margin: 5px 0px;
+  flex-wrap: wrap;
+
+}
+
+.home_card{
+margin-top: -100px;
+padding-top: 100px;
+}
+
+.option_table{
+width: 100%;
+border-spacing: 0px;
+font-size: 1em;
+
+}
+
+
+.option_table td{
+padding: 5px;
+text-align: center;
+width: 12%;
+border-bottom: 1px solid #d0d5dd;
+min-width: 80px;
+}
+
+.option_cell{
+height: 80px;
+color: #fff;
+}
+
+.option_1{
+background-color: #fff;
+border: 1px solid #333;
+border-width: 1px 1px 3px 1px;
+color: #263746;
+position: relative;
+z-index: 70;
+}
+
+.table_text{
+width: 100px;
+text-align: center;
+}
+
+.option_table th{
+padding: 5px;
+width: 12%;
+text-align: center;
+font-weight: 600;
+
+}
+
+.option_table .row_description{
+width: 34%;
+text-align: left;
+font-weight: 600;
+}
+
+.sub_option label{
+margin-left: 10px;
+color: #aaa;
+}
+
+.option_table .table_sub{
+border-left: 0px;
+}
+.no_background{
+background: transparent !important;
+}
+
+
+.option_table tr:nth-child(even) {
+background-color: #f7f7f7;
+}
+
+
+.option_table td {
+border-right: solid 1px #d0d5dd;
+border-left: solid 1px #d0d5dd;
+margin: 0px
+overflow: hidden;
+
+}
+
+
+.option_table tr:first-child td{
+border-top: solid 1px #d0d5dd;
+}
+
+.option_table tr:first-child td:first-child{
+border-radius: 10px 0px 0px 0px;
+}
+
+.option_table tr:first-child td:last-child{
+border-radius: 0px 10px 0px 0px;
+}
+
+.table_title{background: #fff;
+border-bottom: 3px solid #263746;
+padding-left: 0px !important;
+}
+
+
+.buy{
+background:  #263746;
+}
+
+
+ .premium_cell{
+
+text-align: right !important;
+}
+
+</style>
+
+
+
+<body>
+<main class="main-container">
+
+  <div class="main-content">
+
+
+<div class="section">
+<div class="" >
+<div>
+<div id="logo"><img src="https://chaddiprince.github.io/kellyklee/online_proposal/img/small_logo.png" alt="Hub International"  height="40px">
+<div class="title"> <h4>|  Hub International</h4></div>
+</div> 
+<h2>Coverage for James and Juile Franklin</h2>
+<p class="subhead">7/4/2023</p>
+<p class="subhead">Coverage Advisor: Maya Dallas</p>
+<p class="subhead">mdallas@insuranceco.com</p>
+</div>
+</div>
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Home</h4></th>
+      <th class="option_1">Insurer</th>
+	  <th class="option_1">Term</th>
+      <th class="option_1">Dedutiable</th>
+      <th class="option_1">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">3434 W 26th Ave.</td>
+      <td>Chubb</td>
+      <td>1 year</td>
+	  <td>$1,000</td>
+      <td class="premium_cell">$1,300</td>
+    </tr>
+    <tr>
+      <td class="row_description">&nbsp; &nbsp; Flood</td>
+      <td>NFIP</td>
+      <td>1 year</td>
+      <td>$1,000</td>
+      <td class="premium_cell">$300</td>
+    </tr>    
+
+	<tr class="totals">
+	 <td colspan="3"></td>
+      <td ><strong>Total</strong></td>
+     <td class="premium_cell"><Strong>$1,600</strong></td>
+    
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Auto</h4></th>
+      <th class="option_1">Insurer</th>
+	  <th class="option_1">Term</th>
+      <th class="option_1">Dedutiable</th>
+      <th class="option_1">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">2023 Porsche Cayenne</td>
+      <td>Chubb</td>
+      <td>1 year</td>
+	  <td>$1,000</td>
+      <td class="premium_cell" >$1,300</td>
+    </tr>
+    <tr>
+      <td class="row_description">2014 Toyota Camry</td>
+      <td>Chubb</td>
+      <td>1 year</td>
+      <td>$1,000</td>
+      <td class="premium_cell" >$800</td>
+    </tr>    
+
+	<tr class="totals">
+	 <td colspan="3"></td>
+      <td ><strong>Total</strong></td>
+     <td class="premium_cell"><Strong>$2,100</strong></td>
+    
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Valuables</h4></th>
+      <th class="option_1">Insurer</th>
+	  <th class="option_1">Term</th>
+      <th class="option_1">Dedutiable</th>
+      <th class="option_1">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Artwork</td>
+      <td>Chubb</td>
+      <td>1 year</td>
+	  <td>N/A</td>
+      <td class="premium_cell">$600</td>
+    </tr>
+  
+
+	<tr class="totals">
+	 <td colspan="3"></td>
+      <td ><strong>Total</strong></td>
+     <td class="premium_cell"><Strong>$600</strong></td>
+    
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h4>Umbrella</h4></th>
+      <th class="option_1">Insurer</th>
+	  <th class="option_1">Term</th>
+      <th class="option_1">Dedutiable</th>
+      <th class="option_1">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">$3,000,000</td>
+      <td>Chubb</td>
+      <td>1 year</td>
+	  <td>N/A</td>
+      <td class="premium_cell"> $600</td>
+    </tr>
+  
+
+	<tr class="totals">
+	 <td colspan="3"></td>
+      <td ><strong>Total</strong></td>
+     <td class="premium_cell"><Strong>$600</strong></td>
+    
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<table class="option_table">
+
+  <tbody>
+  
+	<tr class="totals">
+     <td ><h4 style="text-align: right; padding-right: 10px;">Total: $4,900</h4></td>
+    </tr>
+	<tr class="totals">
+     <td ><p style="text-align: right; padding-right: 10px;">Intital to except coverages: ______</p></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br />
+
+<table class="option_table">
+  <thead>
+    <tr>
+      <th class="table_title row_description"><h3>Declined coverage</h3> <br></th>
+      <th class="option_1">Insurer</th>
+	  <th class="option_1">Term</th>
+      <th class="option_1">Dedutiable</th>
+      <th class="option_1">Premium</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="row_description">Flood: 2549 S Kearney St.</td>
+      <td>NFIP</td>
+      <td>1 year</td>
+      <td>$1,000</td>
+      <td class="premium_cell">$300</td>
+    </tr>
+		<tr class="totals" >
+     <td colspan="5"><p style="text-align: right; padding-right: 10px;">Intital to decline coverages: ______</p></td>
+    </tr>
+  </tbody>
+</table>
+<div class="descriptions">
+<div class="next_steps">
+<h2>Next Steps</h2>
+<ul>
+<li>Signed broker of record for California Chubb home, valuables, and excess liability policy </li>
+<li>Placement of Colorado Home and California Auto</li>
+<li>Once CA home, Valuables, and Excess are with Insurance Broker, we will review coverages for adjustments</li>
+</ul>
+</div>
+
+<div class="disclosures">
+<h2>Disclosures</h2>
+<p>
+<strong>In-person home review: </strong>
+After your home policies are issued, COMPANY NAME will visit your home to verify it’s features and ensure it is properly covered. I understand that a change in coverage and may result in an adjustment of my rate. _________ 
+</p>
+<p>
+<strong>Information Accuracy</strong>
+The information contained in this proposal is important in understanding risk and setting rates. I confirm, to the best of my knowledge, the information in this proposal is accurate.  ________
+</p>
+</div>
+</div>
+
+<table class="option_table">
+
+  <tbody>
+  
+	<tr class="totals">
+     <td ><p style="text-align: left; padding-left: 10px;">
+	 _______________________________________________________________________ <br/>
+	 Client Signature 
+	 </p></td>
+    </tr>
+	
+		<tr class="totals">
+     <td ><p style="text-align: left; padding-left: 10px;">
+	__/__/____ <br/>
+	Date
+	 </p></td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+  <footer class="main-footer">FOOTER</footer>
+  </div>
+</main>
+</body>
+
+
+
+
+</html>
